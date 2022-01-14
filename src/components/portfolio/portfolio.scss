@@ -1,0 +1,30 @@
+.portfolio {
+    background-image: url(../../images/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .portfolio-container {
+        top: 600px;
+        display: flex;
+        .portfolio-header {
+            font-size: 5rem;
+            font-weight: 800;
+        }
+    }
+    .circle {
+        border: black 7px solid;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-right: -100px;
+        margin-bottom: -100px;
+        float: right;
+        align-self: flex-end;
+        position: relative;
+    }
+}

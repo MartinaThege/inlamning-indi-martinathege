@@ -1,0 +1,52 @@
+@import "../../global.scss";
+.intro {
+    // background-image: url('../../images/forest2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background-color: white;
+    display: flex;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        top: 20vh;
+        position: absolute;
+        .header {
+            font-size: 4rem;
+            color: black;
+            font-family: 'Ubuntu', sans-serif;
+            margin-left: 10px;
+            margin-right: 0;
+        }
+    }
+    .box {
+        border: black 7px solid;
+        border-left: transparent;
+        height: 380px;
+        width: 500px;
+        margin-bottom: -190px;
+        margin-left: 0;
+        top: 500px;
+        position: relative;
+    }
+}
+
+@media (max-width: $breakpoint-min) {
+    .header {
+        font-size: 2rem;
+        color: black;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 10px;
+    }
+    .box {
+        display: none;
+    }
+}
+
+//färger som finns i backgrunden på portfolio
+//rgba(197,202,196,255)
+//rgba(92,104,91,255)
