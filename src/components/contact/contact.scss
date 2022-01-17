@@ -1,6 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .contact {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     background-color: rgba(197, 202, 196, 255);
     justify-content: center;
@@ -11,6 +17,30 @@
             font-size: 5rem;
             font-weight: 800;
             text-align: center;
+        }
+    }
+    .contact-info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        width: 100vw;
+        .contact-info-pb {
+            width: 30%;
+            border-right: black 1px solid;
+            padding: 10px;
+        }
+        .contact-info-adress {
+            width: 30%;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .contact-info-image img {
+            height: auto;
+            width: 220px;
+            border-left: black 1px solid;
+            padding: 20px;
         }
     }
 }

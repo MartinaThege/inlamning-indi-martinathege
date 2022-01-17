@@ -1,9 +1,9 @@
 import React from 'react';
-import "./intro.scss"
+import "./index.scss"
 
-export default function Intro() {
+export default function Index() {
     return (
-        <div className="intro" id="intro">
+        <div className="index" id="index">
 
                 <div className="container">
                     <div className="header">Hej! Martina Thege heter jag och är frontend-utvecklare i Stockholm.</div>

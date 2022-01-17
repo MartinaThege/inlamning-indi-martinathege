@@ -1,4 +1,4 @@
-.portfolio {
+.about {
     background-image: url(../../images/background1.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -8,10 +8,10 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    .portfolio-container {
+    .about-container {
         top: 600px;
         display: flex;
-        .portfolio-header {
+        .about-header {
             font-size: 5rem;
             font-weight: 800;
         }

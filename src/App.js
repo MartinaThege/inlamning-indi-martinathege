@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
-import Intro from "./components/intro/Intro";
-import Portfolio from "./components/portfolio/Portfolio";
+import Index from "./components/index/Index";
+import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 import React from 'react';
@@ -24,8 +24,8 @@ const [menuOpen, setMenuOpen] = useState(false)
             <Menu menuOpen= {menuOpen} setMenuOpen={setMenuOpen}/>
             <div className="sections">
                 
-                    <Intro/>
-                    <Portfolio/>
+                    <Index/>
+                    <About/>
                     <Contact/>
               
             </div>
