@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
 import {SocialMediaIconsReact} from 'social-media-icons-react';
-
+import { IconName } from "react-icons/fa";
 
 
 

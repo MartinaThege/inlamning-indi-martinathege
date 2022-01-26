@@ -1,30 +1,148 @@
-.about {
-    background-image: url(../../images/background1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Ubuntu', sans-serif;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    .about-container {
-        top: 600px;
+    @import "../../global.scss";
+    .about {
+        font-family: 'Ubuntu', sans-serif;
         display: flex;
-        .about-header {
-            font-size: 5rem;
-            font-weight: 800;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 200vh;
+        width: 60vw;
+        flex-direction: column;
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 60vw;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            .about-items {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 60%;
+                margin: 0;
+                padding: 0;
+                .about-header {
+                    // font-weight: 500;
+                    padding: 10px;
+                    float: left;
+                    padding-left: 0;
+                }
+                .about-item {
+                    line-height: 1.5rem;
+                    text-align: left;
+                }
+            }
+            .bild {
+                width: 200px;
+                height: 250px;
+                border: black solid;
+                margin: 30px;
+            }
+        }
+        .kunskaper-container {
+            width: 50vw;
+            top: 50%;
+            .kunskaper-header {
+                //  font-size: 2rem;
+                // font-weight: 500;
+                display: block;
+            }
+            .kunskaper-items {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .kunskaper-item1,
+                .kunskaper-item2 {
+                    font-weight: 300;
+                    font-family: 'Montserrat', sans-serif;
+                    width: 50%;
+                    .kunskaper-item1-header,
+                    .kunskaper-item2-header {
+                        flex-direction: column;
+                        padding-top: 30px;
+                        padding-bottom: 20px;
+                    }
+                    .feature-icons1,
+                    .feature-icons2 {
+                        display: flex;
+                        //align-items: center;
+                        justify-content: space-around;
+                        line-height: 3.25rem;
+                        flex-direction: column;
+                        .feature-icons-js1,
+                        .feature-icons-react1,
+                        .feature-icons-code1,
+                        .feature-icons-search,
+                        .feature-icons-node,
+                        .feature-icons-js2,
+                        .feature-icons-react2,
+                        .feature-icons-code2 {
+                            margin: 10px;
+                            letter-spacing: 0.1em;
+                            font-size: 25px;
+                            bottom: 10px;
+                            word-spacing: 15px;
+                        }
+                    }
+                }
+            }
+            .arbete-header {
+                font-size: medium;
+            }
+            .arbete-container {
+                margin: 0;
+                padding: 0;
+                .arbete-items {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    .arbete-item1 {
+                        width: 30%;
+                        margin: 5px 0 5px 0;
+                        padding: 10px 0 10px 0;
+                        background-color: white;
+                        ul {
+                            list-style-type: none;
+                            line-height: 5rem;
+                            li {
+                                padding-top: 5px;
+                                border: lightgrey solid 1px;
+                            }
+                        }
+                    }
+                    .arbete-item2 {
+                        width: 30%;
+                        margin: 5px 0 5px 0;
+                        padding: 10px 0 10px 0;
+                        background-color: white;
+                        ul {
+                            list-style-type: none;
+                            li {
+                                border: lightgrey solid 1px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-    .circle {
-        border: black 7px solid;
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        margin-right: -100px;
-        margin-bottom: -100px;
-        float: right;
-        align-self: flex-end;
-        position: relative;
+    
+    @media (max-width: $breakpoint-min) {
+        .about {
+            height: auto;
+            .about-container {
+                width: 100%;
+            }
+        }
+        .kunskaper-container {
+            .kunskaper-items {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
-}
