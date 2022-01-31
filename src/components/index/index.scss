@@ -4,26 +4,41 @@
     font-weight: 200;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
+    background-image: linear-gradient(190deg, #F4F4F4 calc(70% + 2px), #eeb4aa 70%);
     .container {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 30vh;
         position: absolute;
         line-height: 1.3;
         width: 60vw;
         margin-left: 10px;
         margin-right: 0;
+        margin-top: 120px;
+        .index-item {
+            font-family: 'Reenie Beenie', sans-serif;
+        }
         .header {
             font-size: 3.5rem;
             color: black;
             font-family: 'Ubuntu', sans-serif;
             width: 60vw;
             padding-bottom: 30px;
+            h6 {
+                font-family: 'Special Elite', cursive;
+                font-size: 1.5rem
+            }
         }
+    }
+    .flower-main {
+        display: block;
+        z-index: 1;
+        height: auto;
+        width: 220px;
+        position: absolute;
+        right: 130px;
+        bottom: -50px;
     }
 }
 
@@ -38,6 +53,25 @@
             }
             .index-item {
                 width: 80vw;
+            }
+        }
+        .flower-main {
+            display: none
+        }
+    }
+}
+
+@media (max-width: $breakpoint-max) {
+    .index {
+        .container {
+            height: 100vh;
+            top: 0;
+            .header {
+                font-size: 3rem;
+                width: 60vw;
+            }
+            .index-item {
+                width: 60vw;
             }
         }
     }

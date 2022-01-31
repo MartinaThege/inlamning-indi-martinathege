@@ -4,37 +4,53 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 import React from 'react';
+import Fragment from 'react';
 import ReactDOM from 'react-dom'; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 import { IconName } from "react-icons/fa";
-
+import Arrow from "./components/arrow/Arrow";
 
 
 function App(){
 const [menuOpen, setMenuOpen] = useState(false)
 
     return (
-
 <div className="app">
-
         
             <Navbar menuOpen= {menuOpen} setMenuOpen={setMenuOpen}/>
             <Menu menuOpen= {menuOpen} setMenuOpen={setMenuOpen}/>
-            <div className="sections">
+            <Arrow/>
+
                 
-                    <Index/>
+            <div className="sections">
+                    <Router>
+                        <Routes>
+                            {/*<<Route path="/" element={<Main />}></Route>*/}
+                            <Route path="/" element={
+                                <React.Fragment>
+                                    <Index/>
+                                    <About/>
+                                    <Contact/>
+                                </React.Fragment>
+                            }/>
+                        </Routes>
+                    </Router>
+                    {/*<Index/>
                     <About/>
-                    <Contact/>
-              
+                    <Contact/>*/}
+                    
             </div>
-       
+            
+
 </div>
 
-     
     );
 }
+
+
 
 export default App; 
 ReactDOM.render(

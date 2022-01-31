@@ -2,23 +2,59 @@ import React from 'react';
 import { FaJsSquare, FaCode, FaReact, FaSearchengin, FaNodeJs} from "react-icons/fa";
 import { RiBriefcase5Line, RiTeamLine, RiCustomerService2Fill } from "react-icons/ri";
 import "./about.scss";
+import styled from 'styled-components';
+import dummie1 from '../../images/pngwing.com-2.png';
+import dummie2 from '../../images/pngwing.com-3.png';
+import dummie3 from '../../images/pngwing.com-4.png';
+import migImage from '../../images/IMG_2538.jpg';
+import leaf from '../../images/leafs.svg';
+
+
+
+function readCV() {
+    alert('Här ska det vara ett CV i PDF');
+  }
+
+  const Button = styled.button`
+  width: 8rem;
+  background-color: white;
+  border: solid 1px grey;
+  color: black;
+  font-size: 12px;
+  padding: 12px ;
+  border-radius: 3px;
+  margin: 10px 0px;
+  cursor: pointer;
+  &:hover {
+    background-color: lightgrey;
+    transition: ease 0.3s;
+    letter-spacing: 0.1rem
+  }
+`;
 
 export default function About() {
     return ( <div className = "about" id = "about" >
-        <div className="about-container">
+<img className="leaf" src={leaf}/>
+
+<div className="about-container">
             <div className="about-items">
                 <div className="about-header"><h3>Om mig</h3></div>
-                <div className="about-item">
-Hej! Jag heter Martina och jag tycker om att forma och utveckla saker som finns på internet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quibusdam. Ducimus mollitia quis molestias ex tempora provident dignissimos amet explicabo fugit, asperiores omnis repudiandae. Numquam fugit officia nemo sit a fuga ipsum consectetur. Voluptatibus voluptates minima eaque adipisci iste sequi illum sunt necessitatibus ratione, rerum culpa, accusantium velit! Maxime, nobis.      </div>
+                <div className="about-item"><div className="about-item-text">
+                            Hej! Jag heter Martina och jag tycker om att utforma och utveckla saker som finns på internet. Jag är en positiv och dedikerad person med stort engagemang och strävar alltid efter att utvecklas. Under mina år som yrkesverksam har jag hunnit med flera olika typer av yrkesroller; 
+                            eventkoordinator på Stockholms Handelskammare, projektkoordinator i Stockholms Stad och utbildningsansvarig på Arlanda Swedavia. Genom min yrkesmässiga bakgrund har jag god erfarenhet 
+                            av att effektivt hitta kreativa lösningar på utmaningar. <br/> <br/> När jag inte jobbar dansar jag argentinsk tango, läser och umgås med familjen. Jag drömmer om att få visa livet för mina barn och någongång driva ett mindre lantbruk. </div>
+                    <img src={migImage}/></div>
+            
 
-</div><div className="bild"></div>
-</div>
+            
+                <Button onClick={readCV}>Här är mitt CV</Button>
+        </div></div>
         
 
         <div className="kunskaper-container">
 
            <div className = "kunskaper-header" > <h3>Kunskaper</h3> </div><br/>
-                 Dessa områden är jag kunnig och speciliserad inom. Detta har jag lärg genom min utbildning och genom självstudier. 
+                 Dessa områden är jag kunnig och speciliserad inom. Jag är hela tiden mån om att uppdatera mig om det senaste och är ödmjuk inför att det alltid finns mer att lära. Detta har jag lärt genom min utbildning och genom självstudier. 
                                   
             <div className="kunskaper-items">
 
@@ -45,45 +81,19 @@ Hej! Jag heter Martina och jag tycker om att forma och utveckla saker som finns 
             </div>
             </div>
             <br/>
+<div className="portfolio"><h3>Hemsidor jag har fått göra</h3>
+Här är några exempel på hemsidor jag har fått äran att utveckla.</div>
 
-            <div className="arbete-header"> <h3> Här har jag jobbat </h3></div>
-
-            <div className="arbete-container">
-
-                <div className="arbete-items">
-<div className="arbete-item1">
-<ul>
-<li>Frilans</li>
-<li>Stockholms Handelskammare</li>
-<li>Stockholms stad</li>
-
-</ul>
-
-
-</div>
-<div className="arbete-item2">
-    <ul>
-
-        <li>Frilans inom webbutveckling och projekt inom front end och webdesign. Här tar jag ansvar för hela; från första kundkontakt till färdig produkt.  </li>
-<br/>
-        <li>Ansvarade för företagets alla event och projektledde större konferenser.</li>
-        <br/>
-        <li>Jobbade med Stockholms stads större publika evenemang som projektledare och ansvarig för det operativa arbetet som projektkoordinator.  </li>
-
-    </ul>
-
-
-
-
-
-</div>
+            <div className="dummies">
+                    <img src={dummie1}/>
+                    <img src={dummie2}/>
+                    <img src={dummie3}/>
                 </div>
-            </div>
+        
+        </div>
+        
 
-            
         
-        
-    </div>
     </div>
 
 

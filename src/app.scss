@@ -13,8 +13,8 @@
         top: 70px;
         scroll-behavior: smooth;
         overflow-x: hidden;
-        //  scroll-snap-type: y mandatory;
-        // scrollbar-width: none;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;
         &::-webkit-scrollbar {
             display: none;
         }

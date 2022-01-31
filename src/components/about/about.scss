@@ -1,76 +1,269 @@
-    @import "../../global.scss";
-    .about {
-        font-family: 'Ubuntu', sans-serif;
+@import "../../global.scss";
+.about {
+    font-family: 'Reenie Beenie', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200vh;
+    width: 60vw;
+    flex-direction: column;
+    //background-color: #eeb4aa;
+    background-color: #a1eacd;
+    background: linear-gradient(-15deg, transparent 64%, #eeb4aa 0) 0 50%, linear-gradient(60deg, transparent 75%, #eeb4aa 0) 0 50%;
+    .leaf {
+        display: block;
+        position: absolute;
+        top: 1000px;
+        left: 150px;
+        height: auto;
+        width: 200px;
+        -webkit-transform: rotate( 132deg);
+        transform: rotate( 132deg);
+    }
+    .about-container {
         display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 200vh;
-        width: 60vw;
-        flex-direction: column;
-        .about-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+        padding: 0;
+        .about-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 50vw;
+            margin: 0;
+            padding: 0;
+            img {
+                height: 15rem;
+                width: auto;
+                margin-left: 20px;
+                border-radius: 7px;
+            }
+            .about-header {
+                // font-weight: 500;
+                padding: 10px;
+                padding-left: 0;
+            }
+            .about-item {
+                line-height: 2rem;
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .about-item-text {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+    .kunskaper-container {
+        line-height: 1.5rem;
+        width: 53vw;
+        top: 50%;
+        text-align: right;
+        .kunskaper-header {
+            //  font-size: 2rem;
+            // font-weight: 500;
+            display: block;
+        }
+        .kunskaper-items {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: center;
-            width: 60vw;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-            .about-items {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                flex-wrap: wrap;
-                width: 60%;
-                margin: 0;
-                padding: 0;
-                .about-header {
-                    // font-weight: 500;
-                    padding: 10px;
-                    float: left;
-                    padding-left: 0;
+            .kunskaper-item1,
+            .kunskaper-item2 {
+                font-family: 'Ubuntu', sans-serif;
+                width: 50%;
+                .kunskaper-item1-header,
+                .kunskaper-item2-header {
+                    flex-direction: column;
+                    padding-top: 30px;
+                    padding-bottom: 20px;
                 }
-                .about-item {
-                    line-height: 1.5rem;
-                    text-align: left;
+                .feature-icons1,
+                .feature-icons2 {
+                    display: flex;
+                    //align-items: center;
+                    justify-content: space-around;
+                    line-height: 3.25rem;
+                    flex-direction: column;
+                    .feature-icons-js1,
+                    .feature-icons-react1,
+                    .feature-icons-code1,
+                    .feature-icons-search,
+                    .feature-icons-node,
+                    .feature-icons-js2,
+                    .feature-icons-react2,
+                    .feature-icons-code2 {
+                        margin: 10px;
+                        margin-left: 0;
+                        letter-spacing: 0.1em;
+                        font-size: 20px;
+                        bottom: 10px;
+                        word-spacing: 15px;
+                    }
                 }
-            }
-            .bild {
-                width: 200px;
-                height: 250px;
-                border: black solid;
-                margin: 30px;
             }
         }
-        .kunskaper-container {
-            width: 50vw;
-            top: 50%;
-            .kunskaper-header {
-                //  font-size: 2rem;
-                // font-weight: 500;
-                display: block;
-            }
-            .kunskaper-items {
+        .arbete-header {
+            font-size: medium;
+        }
+        .arbete-container {
+            margin: 0;
+            padding: 0;
+            .arbete-items {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                .arbete-item1 {
+                    width: 30%;
+                    margin: 5px 0 5px 0;
+                    padding: 10px 0 10px 0;
+                    background-color: white;
+                    ul {
+                        list-style-type: none;
+                        line-height: 5rem;
+                        li {
+                            padding-top: 5px;
+                            border: lightgrey solid 1px;
+                        }
+                    }
+                }
+                .arbete-item2 {
+                    width: 30%;
+                    margin: 5px 0 5px 0;
+                    padding: 10px 0 10px 0;
+                    background-color: white;
+                    ul {
+                        list-style-type: none;
+                        li {
+                            border: lightgrey solid 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .portfolio {
+            margin: 20px 0 20px 0;
+        }
+        .dummies {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 20px;
+            img {
+                height: 200px;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-max) {
+    .about {
+        height: auto;
+        .about-container {
+            width: 60vw;
+            .about-items {
+                width: 60vw;
+                justify-content: center;
+                align-items: center;
+                .about-item {
+                    justify-content: center;
+                    flex-wrap: nowrap;
+                    .about-item-text {
+                        font-size: 15px;
+                        line-height: 1.5rem;
+                        margin-bottom: 30px;
+                        //text-align: center;
+                    }
+                }
+                img {
+                    box-shadow: 7px 15px rgba(71, 100, 93, 0.39);
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .kunskaper-container {
+        width: 60vw;
+        text-align: justify;
+        padding: 200px;
+        .kunskaper-header {
+            //  font-size: 2rem;
+            // font-weight: 500;
+            display: block;
+        }
+    }
+    .portfolio {
+        margin-top: 100px;
+    }
+    .dummies {
+        width: 80vw;
+        img {
+            height: 100px;
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-min) {
+    .about {
+        height: auto;
+        .about-container {
+            width: 80vw;
+            .about-items {
+                width: 80vw;
+                justify-content: center;
+                align-items: center;
+                .about-item {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .about-item-text {
+                        width: 100%;
+                        font-size: 15px;
+                        line-height: 1.5rem;
+                        margin-bottom: 30px;
+                        //text-align: center;
+                    }
+                }
+                img {
+                    height: auto;
+                    width: 10rem;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    box-shadow: 7px 15px rgba(71, 100, 93, 0.39);
+                }
+            }
+        }
+        .leaf {
+            display: none;
+        }
+        .kunskaper-container {
+            width: 80vw;
+            .kunskaper-items {
+                display: flex;
+                flex-direction: column;
+                width: 70vw;
+                margin-bottom: 50px;
                 .kunskaper-item1,
                 .kunskaper-item2 {
-                    font-weight: 300;
-                    font-family: 'Montserrat', sans-serif;
-                    width: 50%;
+                    // display: none;
                     .kunskaper-item1-header,
                     .kunskaper-item2-header {
-                        flex-direction: column;
-                        padding-top: 30px;
-                        padding-bottom: 20px;
+                        margin: inherit;
                     }
                     .feature-icons1,
                     .feature-icons2 {
                         display: flex;
-                        //align-items: center;
-                        justify-content: space-around;
-                        line-height: 3.25rem;
+                        justify-content: center;
+                        line-height: 1.25rem;
                         flex-direction: column;
                         .feature-icons-js1,
                         .feature-icons-react1,
@@ -80,50 +273,24 @@
                         .feature-icons-js2,
                         .feature-icons-react2,
                         .feature-icons-code2 {
-                            margin: 10px;
-                            letter-spacing: 0.1em;
-                            font-size: 25px;
+                            display: flex;
+                            flex-direction: row;
                             bottom: 10px;
+                            font-size: 15px;
+                            width: 70vw;
                             word-spacing: 15px;
-                        }
-                    }
-                }
-            }
-            .arbete-header {
-                font-size: medium;
-            }
-            .arbete-container {
-                margin: 0;
-                padding: 0;
-                .arbete-items {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin: 0;
-                    padding: 0;
-                    .arbete-item1 {
-                        width: 30%;
-                        margin: 5px 0 5px 0;
-                        padding: 10px 0 10px 0;
-                        background-color: white;
-                        ul {
-                            list-style-type: none;
-                            line-height: 5rem;
-                            li {
-                                padding-top: 5px;
-                                border: lightgrey solid 1px;
-                            }
-                        }
-                    }
-                    .arbete-item2 {
-                        width: 30%;
-                        margin: 5px 0 5px 0;
-                        padding: 10px 0 10px 0;
-                        background-color: white;
-                        ul {
-                            list-style-type: none;
-                            li {
-                                border: lightgrey solid 1px;
+                            svg {
+                                margin-right: 12px;
+                                .FaJsSquare,
+                                .FaCode,
+                                .FaReact,
+                                .FaSearchengin,
+                                .FaNodeJs,
+                                .RiBriefcase5Line,
+                                .RiTeamLine,
+                                .RiCustomerService2Fill {
+                                    font-size: 15px;
+                                }
                             }
                         }
                     }
@@ -131,18 +298,4 @@
             }
         }
     }
-    
-    @media (max-width: $breakpoint-min) {
-        .about {
-            height: auto;
-            .about-container {
-                width: 100%;
-            }
-        }
-        .kunskaper-container {
-            .kunskaper-items {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
+}
