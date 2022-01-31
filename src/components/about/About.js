@@ -8,6 +8,8 @@ import dummie2 from '../../images/pngwing.com-3.png';
 import dummie3 from '../../images/pngwing.com-4.png';
 import migImage from '../../images/IMG_2538.jpg';
 import leaf from '../../images/leafs.svg';
+import cactus from "../../images/cactus.svg";
+
 
 
 
@@ -40,7 +42,7 @@ export default function About() {
             <div className="about-items">
                 <div className="about-header"><h3>Om mig</h3></div>
                 <div className="about-item"><div className="about-item-text">
-                            Hej! Jag heter Martina och jag tycker om att utforma och utveckla saker som finns på internet. Jag är en positiv och dedikerad person med stort engagemang och strävar alltid efter att utvecklas. Under mina år som yrkesverksam har jag hunnit med flera olika typer av yrkesroller; 
+                            Hej! Jag heter Martina och jobbar som frontend-utvecklare. och jag tycker om att utforma och utveckla det som senare ska visas på internet. Jag är en positiv och dedikerad person med stort engagemang och strävar alltid efter att utvecklas. Under mina år som yrkesverksam har jag hunnit med flera olika typer av yrkesroller; 
                             eventkoordinator på Stockholms Handelskammare, projektkoordinator i Stockholms Stad och utbildningsansvarig på Arlanda Swedavia. Genom min yrkesmässiga bakgrund har jag god erfarenhet 
                             av att effektivt hitta kreativa lösningar på utmaningar. <br/> <br/> När jag inte jobbar dansar jag argentinsk tango, läser och umgås med familjen. Jag drömmer om att få visa livet för mina barn och någongång driva ett mindre lantbruk. </div>
                     <img src={migImage}/></div>
@@ -69,6 +71,7 @@ export default function About() {
                 </div>
             </div>
 
+            <img className="cactus" src={cactus}/>
 
 
             <div className="kunskaper-item2">

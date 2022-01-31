@@ -20,6 +20,14 @@
         -webkit-transform: rotate( 132deg);
         transform: rotate( 132deg);
     }
+    .cactus {
+        display: block;
+        position: absolute;
+        top: 1710px;
+        left: 300px;
+        height: auto;
+        width: 200px;
+    }
     .about-container {
         display: flex;
         flex-direction: row;
@@ -243,6 +251,9 @@
             }
         }
         .leaf {
+            display: none;
+        }
+        .cactus {
             display: none;
         }
         .kunskaper-container {

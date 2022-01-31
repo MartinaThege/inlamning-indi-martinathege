@@ -32,6 +32,7 @@
             .contact-header {
                 font-weight: 800;
                 text-align: center;
+                margin-top: 10px;
             }
             .contact-info-pb {
                 padding-top: 20px;
@@ -49,6 +50,50 @@
                         flex-direction: row;
                         padding: 20px 10px 10px 0px;
                     }
+                }
+            }
+        }
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            position: relative;
+            border-radius: 8px;
+            padding: 30px;
+            width: 30vw;
+            height: 40vh;
+            margin: 20px;
+            background-color: rgb(213, 213, 152);
+            font-family: 'Reenie Beenie', sans-serif;
+            .hm {
+                font-weight: 800;
+                text-align: center;
+                margin-top: 10px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                margin: 20px;
+                width: 100px;
+                .message,
+                .name,
+                .email {
+                    height: 20px;
+                    font-family: 'Special Elite';
+                    padding: 10px;
+                }
+                .message {
+                    height: 80px;
+                    width: 250px;
+                    padding: 10px;
+                }
+                button {
+                    margin-top: 30px;
+                    margin-left: 70px;
+                    height: 30px;
+                    width: 150px;
+                    align-self: center;
+                    font-family: 'Special Elite';
                 }
             }
         }
