@@ -62,7 +62,7 @@ const handleSubmit = (event) => {
                 +46 70 488 08 67<br/>
                 <u>info@detomdetta.se</u>
                   <div className="icons">
-                    <a href="https://github.com/MartinaThege"> <FaGithub/></a> <a href="https://instagram.se/det.om.detta"> <FaInstagram/></a> <a href="https://www.linkedin.com/in/martina-thege-0b7466b7/?originalSubdomain=se"> <FaLinkedin/></a></div>
+                    <a href="https://github.com/MThege"> <FaGithub/></a> <a href="https://instagram.se/det.om.detta"> <FaInstagram/></a> <a href="https://www.linkedin.com/in/martina-thege-0b7466b7/?originalSubdomain=se"> <FaLinkedin/></a></div>
               </div>
             </div>
          
