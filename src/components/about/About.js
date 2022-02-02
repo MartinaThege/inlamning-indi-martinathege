@@ -84,7 +84,7 @@ export default function About() {
             </div>
             </div>
             <br/>
-<div className="portfolio"><h3>Hemsidor jag har fått göra</h3>
+<div className="portfolio1"><h3>Hemsidor jag har fått göra</h3>
 Här är några exempel på hemsidor jag har fått äran att utveckla.</div>
 
             <div className="dummies">

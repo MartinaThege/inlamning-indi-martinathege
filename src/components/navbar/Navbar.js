@@ -23,6 +23,7 @@ export default function Navbar({menuOpen, setMenuOpen}) {
                     <ul className="nav-menu">
                         <li><a href= "#index" className="nav-item">Hem</a></li>
                         <li><a href= "#about" className="nav-item">Om mig</a></li>
+                        <li><a href= "#portfolio" className="nav-item">Portfolio</a></li>
                         <li><a href= "#contact" className="nav-item">Kontakt</a></li>
                     </ul>
                 </div>

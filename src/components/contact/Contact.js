@@ -3,12 +3,37 @@ import './contact.scss';
 import {FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import styled from 'styled-components';
-export default function Contact() {
+import{ init, sendForm } from '@emailjs/browser';
+import emailjs from 'emailjs-com'
+init("user_LRslu9SWCzaWUK43GRRSQ");
 
+export default function Contact() {
+const form = useRef(null);
 const nameRef = useRef(null)
 const emailRef = useRef(null)
 const messageRef =  useRef(null)
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm
+    ('service_5meor97', 'template_akprifl', e.target, 'user_LRslu9SWCzaWUK43GRRSQ')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      document.querySelector(
+        ".ui-message"
+      ).innerText = `Tack för ditt meddelande!`;;
+      var frm = document.getElementsByName('form')[0];
+      frm.reset();  
+
+
+  };
+
+  /*
 const handleSubmit = (event) => {
       event.preventDefault()
 
@@ -19,12 +44,12 @@ const handleSubmit = (event) => {
             }
 
       alert("Tack för ditt meddelande😎 : \n" + JSON.stringify(data) )
-}
+}*/
 
 
     return (
       <IconContext.Provider value={{ size: '2.5em', color: 'black'}}>
-        <div className="contact">
+        <div className="contact" id="contact">
           <div className="contact-container">
             <div className="contact-info">
               <div className="contact-header"> <h3> Hör gärna av dig!</h3></div>
@@ -41,7 +66,9 @@ const handleSubmit = (event) => {
          
             <div className="container2"> 
               <div className="hm"> Skriv till mig!</div>
-              <form className="form">
+              
+              
+              <form onSubmit={sendEmail} ref={form} className="form">
                 <div className="name">
                   <input
                     type="text"
@@ -71,8 +98,8 @@ const handleSubmit = (event) => {
                   ref={messageRef}
 
               /></div>
-                <button onClick={handleSubmit} type="submit" className="sendMsg">Sänd</button>
-
+                <button type="submit" className="sendMsg">Sänd</button>
+                <div className="ui-message"></div>
               </form>
           </div>
           </div>
@@ -81,7 +108,7 @@ const handleSubmit = (event) => {
 
           
 
-<div className="contact-footer"> © 2021 | Designad & kodad med 💙 av Martina Thege</div>
+<div className="contact-footer"> © 2021 | Designad och kodad med 💙 av Martina Thege</div>
         </div>
         </IconContext.Provider> 
     )

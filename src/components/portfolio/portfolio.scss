@@ -1,0 +1,43 @@
+@import "../../global.scss";
+.portfolio {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    height: 70vh;
+    .portfolio-header {
+        font-weight: 700;
+        font-size: 25px;
+        position: absolute;
+        margin: 30px;
+    }
+    .portfolio-container {
+        flex-direction: column;
+        border: $mainColor solid 2px;
+        border-radius: 10px;
+        width: 20vw;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        margin: 30px;
+        background-color: rgb(212, 238, 212);
+        .portfolio-name {
+            font-weight: 900;
+            padding: 10px;
+        }
+        .portfolio-language {
+            padding: 5px;
+        }
+        .portfolio-description {
+            padding: 15px;
+            font-style: italic;
+        }
+        .html_url {
+            padding: 20px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

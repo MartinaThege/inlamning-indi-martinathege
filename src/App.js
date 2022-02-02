@@ -2,6 +2,7 @@ import Navbar from "./components/navbar/Navbar";
 import Index from "./components/index/Index";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import Portfolio from "./components/portfolio/Portfolio";
 import "./app.scss";
 import React from 'react';
 import Fragment from 'react';
@@ -28,11 +29,11 @@ const [menuOpen, setMenuOpen] = useState(false)
             <div className="sections">
                     <Router>
                         <Routes>
-                            {/*<<Route path="/" element={<Main />}></Route>*/}
                             <Route path="/" element={
                                 <React.Fragment>
                                     <Index/>
                                     <About/>
+                                    <Portfolio/>
                                     <Contact/>
                                 </React.Fragment>
                             }/>
