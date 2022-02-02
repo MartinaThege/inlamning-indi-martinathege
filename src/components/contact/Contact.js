@@ -8,10 +8,14 @@ import emailjs from 'emailjs-com'
 init("user_LRslu9SWCzaWUK43GRRSQ");
 
 export default function Contact() {
-const form = useRef(null);
+const formRef = useRef(null);
 const nameRef = useRef(null)
 const emailRef = useRef(null)
 const messageRef =  useRef(null)
+const handleClick = () => {
+  formRef.current.reset();
+};
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,8 +31,6 @@ const messageRef =  useRef(null)
       document.querySelector(
         ".ui-message"
       ).innerText = `Tack för ditt meddelande!`;;
-      var frm = document.getElementsByName('form')[0];
-      frm.reset();  
 
 
   };
@@ -68,7 +70,7 @@ const handleSubmit = (event) => {
               <div className="hm"> Skriv till mig!</div>
               
               
-              <form onSubmit={sendEmail} ref={form} className="form">
+              <form onSubmit={sendEmail} onClick={handleClick} ref={formRef} className="form">
                 <div className="name">
                   <input
                     type="text"
