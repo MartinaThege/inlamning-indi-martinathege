@@ -18,7 +18,9 @@
 
 #### Soon
 
+## Screenshot
 
+<img width="1404" alt="Skärmavbild 2022-02-01 kl  17 08 13" src="https://user-images.githubusercontent.com/90245195/152521492-6878bde3-4b16-4337-b8da-94ce3f2be749.png">
 
 
 
