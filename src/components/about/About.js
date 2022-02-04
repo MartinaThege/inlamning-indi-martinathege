@@ -93,15 +93,7 @@ Här är några exempel på hemsidor jag har fått äran att utveckla.</div>
                     <img src={dummie3}/>
                 </div>
         
-        </div>
-        
-
-        
-    </div>
-
-
-        
+        </div> 
+    </div>       
     )
-
-
 }

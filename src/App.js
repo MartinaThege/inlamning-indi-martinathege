@@ -2,7 +2,7 @@ import Navbar from "./components/navbar/Navbar";
 import Index from "./components/index/Index";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
-import Portfolio from "./components/portfolio/Portfolio";
+import PortfolioFetchAPI from "./components/portfolio/PortfolioFetchAPI";
 import "./app.scss";
 import React from 'react';
 import Fragment from 'react';
@@ -33,15 +33,13 @@ const [menuOpen, setMenuOpen] = useState(false)
                                 <React.Fragment>
                                     <Index/>
                                     <About/>
-                                    <Portfolio/>
+                                    <PortfolioFetchAPI/>
                                     <Contact/>
                                 </React.Fragment>
                             }/>
                         </Routes>
                     </Router>
-                    {/*<Index/>
-                    <About/>
-                    <Contact/>*/}
+                   
                     
             </div>
             

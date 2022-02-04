@@ -35,18 +35,6 @@ const handleClick = () => {
 
   };
 
-  /*
-const handleSubmit = (event) => {
-      event.preventDefault()
-
-      const data = {
-            name: nameRef.current.value,
-            email: emailRef.current.value,
-            message: messageRef.current.value
-            }
-
-      alert("Tack för ditt meddelande😎 : \n" + JSON.stringify(data) )
-}*/
 
 
     return (

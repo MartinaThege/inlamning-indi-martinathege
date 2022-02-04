@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react';
-import "./portfolio.scss"
+import "./portfolioFetchAPI.scss"
 import { RiGitRepositoryLine } from "react-icons/ri";
 
 
 
 
-export default function Portfolio() {
+export default function PortfolioFetchAPI() {
 
 
     const [data, setData] = useState();
